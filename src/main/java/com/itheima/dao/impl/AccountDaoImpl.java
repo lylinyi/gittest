@@ -15,6 +15,7 @@ public class AccountDaoImpl extends JdbcDaoSupport implements IAccountDao {
     @Override
     public Account findAccountById(Integer accountId) {
         List<Account> accounts = super.getJdbcTemplate().query("select * from account where id = ?",new BeanPropertyRowMapper<Account>(Account.class),accountId);
+
         return accounts.isEmpty()?null:accounts.get(0);
     }
 
