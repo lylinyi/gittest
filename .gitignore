@@ -1,4 +1,4 @@
 .idea/
 gittest.iml
 target/
-.iml
+*.iml
